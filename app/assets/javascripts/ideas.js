@@ -9,6 +9,7 @@ $(document).ready(function(){
    *  Components
    */
   var IdeasList = require('./ideas/ideas_list');
+  var NewIdea = require('./ideas/ideas_new');
   
   /**
    *  Main Vue App, not an instance because of the router
@@ -23,6 +24,9 @@ $(document).ready(function(){
   router.map({
     '/ideas': {
       component: IdeasList
+    },
+    '/ideas/new': {
+      component: NewIdea
     }
   });
   
