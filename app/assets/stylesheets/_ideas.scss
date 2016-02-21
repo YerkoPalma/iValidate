@@ -17,4 +17,13 @@
     background-color: #f0ad4e;
     padding: 10px 17px;
   }
+  textarea {
+    resize: none;
+  }
+  .canvas-form{
+    textarea, input {
+      width: 100%;
+      border: 0;
+    }
+  }
 }
