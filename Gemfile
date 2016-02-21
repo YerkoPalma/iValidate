@@ -28,8 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "browserify-rails"
 gem 'mongoid', '~> 5.1.0'
 
-gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'aws-sdk', '~> 1.3.4'
+#gem "mongoid-paperclip", :require => "mongoid_paperclip"
+#gem 'aws-sdk', '~> 1.3.4'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

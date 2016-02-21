@@ -43,4 +43,12 @@
       background-color: #5bc0de;
     }
   }
+  .media {
+    width: 70%;
+    margin: 0 auto;
+    img {
+      min-width: 100px;
+      min-height: 100px;
+    }
+  }
 }

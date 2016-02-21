@@ -2,6 +2,14 @@ var Vue = require('vue');
 
 module.exports = Vue.extend({
   template: "#ideasTemplate",
+  ready: function(){
+    this.$http.get('ideas.json').then(function(response){
+      this.ideas = response.data;
+    }, function(response){
+        
+      console.log(JSON.stringify(response));
+    });
+  },
   data: function() {
     return {
       ideas: [],

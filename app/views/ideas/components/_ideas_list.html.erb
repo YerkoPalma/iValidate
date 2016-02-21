@@ -19,8 +19,23 @@
     </form>
   </div>  
     <template v-for="idea in ideas">
-        <p>
-            {{idea.name}} - {{idea.description}}
-        </p>
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="img-responsive media-object" src="{{idea.avatar}}" alt="{{idea.name}}">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                {{idea.name}} 
+                <br><small v-for="tag in idea.tags"><span class="tag-display">{{tag}}</span></small>
+              </h4>
+              {{idea.description}} <br>
+              <a href="#">{{idea.contact}}</a>
+            </div>
+            <hr>
+          </div>
+        </div>
     </template>
 </script>
