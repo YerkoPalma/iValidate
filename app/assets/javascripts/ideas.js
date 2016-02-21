@@ -10,6 +10,7 @@ $(document).ready(function(){
    */
   var IdeasList = require('./ideas/ideas_list');
   var NewIdea = require('./ideas/ideas_new');
+  var CanvasIdea = require('./ideas/ideas_canvas');
   
   /**
    *  Main Vue App, not an instance because of the router
@@ -27,6 +28,9 @@ $(document).ready(function(){
     },
     '/ideas/new': {
       component: NewIdea
+    },
+    '/ideas/canvas': {
+      component: CanvasIdea
     }
   });
   
