@@ -26,4 +26,21 @@
       border: 0;
     }
   }
+  .tag-editor {
+    input.tag-input{
+      border: 0;
+      width: 20%;
+      outline-color: transparent;
+      &:hover, &:focus, &:active, &:visited {
+        border: 0;
+        width: 20%;
+        outline-color: transparent;
+      }
+    }
+    .tag-display {
+      margin: 0 5px;
+      border-radius: 4px;
+      background-color: #5bc0de;
+    }
+  }
 }

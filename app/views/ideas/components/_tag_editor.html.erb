@@ -1,0 +1,8 @@
+<script type="text/x-template"  id="tagEditor">
+  <div class="tag-editor form-control">
+    <span class="tags-container">
+      <span class="tag-display badge" v-for="tag in tags">{{tag}}</span>
+    </span>
+    <input type="text" class="tag-input" id="newIdeaTag" @keyup.space="addTag" @keyup.delete="deleteTag">
+  </div>
+</script>

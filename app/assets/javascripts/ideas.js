@@ -4,6 +4,7 @@ $(document).ready(function(){
   
   Vue.use(require('vue-resource'));
   Vue.use(require('vue-router'));
+  Vue.config.debug = true;
   
   /**
    *  Components
@@ -12,11 +13,12 @@ $(document).ready(function(){
   var NewIdea = require('./ideas/ideas_new');
   var CanvasIdea = require('./ideas/ideas_canvas');
   
+  
   /**
    *  Main Vue App, not an instance because of the router
    */
   var IdeasApp = Vue.extend({});
-  
+    
   /**
    *  Vue Router
    */
