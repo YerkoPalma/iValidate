@@ -11,14 +11,14 @@ $(document).ready(function(){
    */
   var IdeasList = require('./ideas/ideas_list');
   var NewIdea = require('./ideas/ideas_new');
-  var CanvasIdea = require('./ideas/ideas_canvas');
-  
+  var CanvasIdea = require('./ideas/ideas_canvas');  
   
   /**
    *  Main Vue App, not an instance because of the router
    */
-  var IdeasApp = Vue.extend({});
-    
+  var IdeasApp = Vue.extend({});  
+
+
   /**
    *  Vue Router
    */

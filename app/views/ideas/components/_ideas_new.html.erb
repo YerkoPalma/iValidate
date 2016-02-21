@@ -11,29 +11,29 @@
           <div class="text-center panel-body">
             <div id="avatar">Add a profile picture<br></div>
             <br>
-            <input type="file" id="avatarLoader" class="hidden" @change.prevent="addNewIdeaAvatar"/>
             <a href="#!" class="btn btn-default" @click.prevent="triggerFileInput"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Add pic</a>
           </div>
         </div>
       </div>
       <div class="col-lg-7">
         <form class="form-horizontal" @submit.prevent="addIdea">
+          <input type="file" id="avatarLoader" class="hidden" @change.prevent="addNewIdeaAvatar"/>
           <div class="form-group">
             <label for="newIdeaName" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="newIdeaName" placeholder="Name">
+              <input type="text" class="form-control" id="newIdeaName" v-model="idea.name" placeholder="Name">
             </div>
           </div>
           <div class="form-group">
             <label for="newIdeaDesc" class="col-sm-2 control-label">Description</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="newIdeaDesc" placeholder="Description">
+              <input type="text" class="form-control" id="newIdeaDesc" v-model="idea.description" placeholder="Description">
             </div>
           </div>
           <div class="form-group">
             <label for="newIdeaContact" class="col-sm-2 control-label">Contact Mail</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="newIdeaContact" placeholder="Contact mail">
+              <input type="email" class="form-control" id="newIdeaContact" v-model="idea.contact" placeholder="Contact mail">
             </div>
           </div>
           <div class="form-group">
