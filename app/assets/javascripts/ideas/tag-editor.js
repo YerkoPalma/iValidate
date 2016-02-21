@@ -9,12 +9,12 @@ module.exports = Vue.extend({
   },
   methods: {
     addTag: function() {
-      var tag = $('#newIdeaTag').val();
+      var tag = $('#newIdeaTag').val().trim();
       this.tags.push(tag);
       $('#newIdeaTag').val("");
     },
     deleteTag: function() {
-      if ( $('#newIdeaTag').val().trim() !== '' ) {
+      if ( $('#newIdeaTag').val().trim() === '' ) {
         this.tags.pop();
       }  
     }

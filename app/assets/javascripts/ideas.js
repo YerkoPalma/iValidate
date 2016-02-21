@@ -5,12 +5,12 @@ $(document).ready(function(){
   Vue.use(require('vue-resource'));
   Vue.use(require('vue-router'));
   Vue.config.debug = true;
-      
+ 
   /**
    *  Components
    */
   var IdeasList = require('./ideas/ideas_list');
-  var NewIdea = require('./ideas/ideas_new');
+  var NewIdea = require('./ideas/ideas_new');   
   var CanvasIdea = require('./ideas/ideas_canvas');  
   
   /**

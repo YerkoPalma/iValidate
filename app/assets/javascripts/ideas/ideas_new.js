@@ -17,6 +17,12 @@ module.exports = Vue.extend({
   methods: {
     addIdea: function(){
       
+      //only the tags need to be obtained
+      this.idea.tags = this.$children[0].tags;
+      
+      //the avatar might not be set
+      if (this.idea.avatar === "") this.idea.avatar = 'http://placehold.it/230x150';
+      
       this.$http.post(
         'ideas.json', //path
         {idea: this.idea}, //data

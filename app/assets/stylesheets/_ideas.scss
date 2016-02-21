@@ -46,9 +46,26 @@
   .media {
     width: 70%;
     margin: 0 auto;
+    
+    &:first-child {
+      margin-top: 50px;  
+    }
+    
     img {
       min-width: 100px;
       min-height: 100px;
+    }
+    .tag-display {
+      margin: 0 5px;
+      border-radius: 4px;
+      background-color: #5bc0de;
+      padding: 0 5px;
+      text-align: right;
+      color: #eee;
+      font-weight: bold;
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
