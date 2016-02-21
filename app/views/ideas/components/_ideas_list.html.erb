@@ -1,12 +1,23 @@
 <script type="text/x-template"  id="ideasTemplate">
-    <h1>iValidator search</h1>
-    <form @submit.prevent="addIdea">
-      <label>Name:</label>
-      <input type="text" v-model="newIdea.name"/>
-      <label>Description:</label>
-      <input type="text" v-model="newIdea.description"/>
-      <button type="submit">Add</button>
+  <div class="container-fluid bg-big-form">
+    <h1 class="text-center">You have an unique idea? Check it right now!</h1>
+    <br>
+    <form>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          <div class="input-group">
+            <input type="text" class="form-control input-lg" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Go!</button>
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <a v-link="{ path: '/ideas/new' }" class="btn btn-lg btn-block btn-success">Add your own idea</a>
+        </div>
+      </div>
     </form>
+  </div>  
     <template v-for="idea in ideas">
         <p>
             {{idea.name}} - {{idea.description}}
