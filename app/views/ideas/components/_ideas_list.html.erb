@@ -1,0 +1,15 @@
+<script type="text/x-template"  id="ideasTemplate">
+    <h1>iValidator search</h1>
+    <form @submit.prevent="addIdea">
+      <label>Name:</label>
+      <input type="text" v-model="newIdea.name"/>
+      <label>Description:</label>
+      <input type="text" v-model="newIdea.description"/>
+      <button type="submit">Add</button>
+    </form>
+    <template v-for="idea in ideas">
+        <p>
+            {{idea.name}} - {{idea.description}}
+        </p>
+    </template>
+</script>

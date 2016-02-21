@@ -8,6 +8,7 @@ $(document).ready(function(){
   /**
    *  Components
    */
+  var IdeasList = require('./ideas/ideas_list');
   
   /**
    *  Main Vue App, not an instance because of the router
@@ -18,12 +19,17 @@ $(document).ready(function(){
    *  Vue Router
    */
   var router = new VueRouter();
-  
+   
   router.map({
-    //'/ideas': {
-    //  component: UsersList
-    //}
+    '/ideas': {
+      component: IdeasList
+    }
   });
+  
+  router.alias({
+        //to have a root path
+        '/': '/ideas'
+    });
   
   router.start(IdeasApp, '#ideasapp');
 });
