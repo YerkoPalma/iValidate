@@ -17,7 +17,7 @@
         </div>
       </div>
     </form>
-  </div>  
+  </div>
     <template v-for="idea in ideas">
         <div class="container">
           <div class="media">
@@ -28,7 +28,7 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading">
-                {{idea.name}} 
+                {{idea.name}}
                 <br><small v-for="tag in idea.tags"><span class="tag-display">{{tag}}</span></small>
               </h4>
               {{idea.description}} <br>
