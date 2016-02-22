@@ -60,6 +60,6 @@ class IdeasController < ApplicationController
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def canvas_params
-      params.require(:canvas).permit( :key_partners, :key_activities, :key_resources, :value_propositions, :customer_relationships, :channels, :customer_segments, :cost_structures, :revenue_streams ).permit!
+      params.require(:canvas).permit!
     end
   end
