@@ -1,3 +1,11 @@
+# IdeasController holds the actions for the ideas API RESTful
+# Author::    Yerko Palma  (mailto:yerko.palma@usach.cl)
+
+# Hold the following public actions
+#   index
+#   show
+#   create
+#   model
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :model]
 
@@ -34,7 +42,6 @@ class IdeasController < ApplicationController
 
   # POST /ideas/:id/model.json
   def model
-
     @canvas = Canvas.new(canvas_params)
     @idea.canvas = @canvas
 
@@ -48,17 +55,20 @@ class IdeasController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
       @idea = Idea.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list
+    # through.
     def idea_params
       params.require(:idea).permit(:name, :description, :tags, :avatar, :contact, :tags => [])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list
+    # through.
     def canvas_params
       params.require(:canvas).permit!
     end

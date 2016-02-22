@@ -1,3 +1,6 @@
+# Canvas model
+# The structure for the canvas business model representation
+# Author::    Yerko Palma  (mailto:yerko.palma@usach.cl)
 class Canvas
   include Mongoid::Document
 
@@ -11,6 +14,5 @@ class Canvas
   field :cost_structures, type: Hash
   field :revenue_streams, type: Hash
 
-  embedded_in :idea, class_name: "Idea", inverse_of: :canvas
-
+  embedded_in :idea, class_name: 'Idea', inverse_of: :canvas
 end

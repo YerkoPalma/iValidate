@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  #get 'ideas/index'
+  # get 'ideas/index'
 
   resources :ideas, only: [:index, :create, :show]
   # The priority is based upon order of creation: first created -> highest priority.
