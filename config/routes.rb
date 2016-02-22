@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'ideas#index'
 
+  match '/ideas/:id/model', to: 'ideas#model',     via: 'post'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

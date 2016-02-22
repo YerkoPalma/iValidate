@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show]
+  before_action :set_idea, only: [:show, :model]
   
   # GET /ideas
   # GET /ideas.json
@@ -32,6 +32,21 @@ class IdeasController < ApplicationController
     end
   end
   
+  # POST /ideas/:id/model.json
+  def model
+    
+    @canvas = Canvas.new(canvas_params)
+    @idea.canvas = @canvas
+
+    respond_to do |format|
+      if @idea.canvas.save
+        format.json { render json: @canvas, status: :created }
+      else
+        format.json { render json: @canvas.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
@@ -42,4 +57,9 @@ class IdeasController < ApplicationController
     def idea_params
       params.require(:idea).permit(:name, :description, :tags, :avatar, :contact, :tags => [])
     end
-end
+    
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def canvas_params
+      params.require(:canvas).permit( :key_partners, :key_activities, :key_resources, :value_propositions, :customer_relationships, :channels, :customer_segments, :cost_structures, :revenue_streams ).permit!
+    end
+  end

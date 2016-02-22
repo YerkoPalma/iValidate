@@ -14,51 +14,51 @@
           <tr>
             <td rowspan="2" colspan="2">
               <h4>Key partners</h4>
-              <textarea rows="6" placeholder="Description..."></textarea>
-              <input type="text" placeholder="Tags..."/>
+              <textarea rows="6" placeholder="Description..." v-model="canvas.key_partners.description"></textarea>
+              <input type="text" placeholder="Tags..." />
             </td>
             <td colspan="2">
               <h4>Key activities</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.key_activities.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
             <td rowspan="2" colspan="2">
               <h4>Value propositions</h4>
-              <textarea rows="6" placeholder="Description..."></textarea>
+              <textarea rows="6" placeholder="Description..." v-model="canvas.value_propositions.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
             <td colspan="2">
               <h4>Customer Relationships</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.customer_relationships.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
             <td rowspan="2" colspan="2">
               <h4>Customer Segments</h4>
-              <textarea rows="6" placeholder="Description..."></textarea>
+              <textarea rows="6" placeholder="Description..." v-model="canvas.customer_segments.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
           </tr>
           <tr>
             <td colspan="2">
               <h4>Key resources</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.key_resources.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
             <td colspan="2">
               <h4>Channels</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.channels.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td>
           </tr>
           <tr>
             <td colspan="5" rowspan="2">
               <h4>Cost structures</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.cost_structures.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td> 
             <td colspan="5" rowspan="2">
               <h4>Revenue streams</h4>
-              <textarea placeholder="Description..."></textarea>
+              <textarea placeholder="Description..." v-model="canvas.revenue_streams.description"></textarea>
               <input type="text" placeholder="Tags..."/>
             </td> 
           </tr>
@@ -67,7 +67,7 @@
     </div>
     <div class="row">
       <div class="col-lg-3 col-lg-offset-9">
-        <a href="#" class="btn btn-block btn-success btn-lg"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save Idea</a>
+        <a href="#" class="btn btn-block btn-success btn-lg" @click.prevent="saveCanvas"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save Idea</a>
       </div>
     </div>
   </div>

@@ -33,8 +33,10 @@ module.exports = Vue.extend({
       ).then( 
         function(response) {
         //success 
+        //get the id to save the canvas model later
+        var _id = response.data._id;
         
-        this.$route.router.go('/ideas/canvas');
+        this.$route.router.go('/ideas/' + _id + '/canvas');
       }, function (response) {
           //error
           console.log(JSON.stringify(response.data));
