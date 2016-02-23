@@ -3,7 +3,7 @@ FactoryGirl.define do
     name "Easycount"
     description "A web finances administration tool for startups"
     contact "info@easycount.com"
-    avatar ""
+    avatar "YW55IGNhcm5hbCBwbGVhc3VyZQ=="
     tags ["web", "finances", "startup"]
   end
   
@@ -11,7 +11,7 @@ FactoryGirl.define do
     name "fixAR"
     description "Augmented reallity to fix things"
     contact "info@fixar.com"
-    avatar ""
+    avatar "www.placehold.it/120x120"
     tags ["mobile", "AR", "augmented-reallity"]
   end
 end

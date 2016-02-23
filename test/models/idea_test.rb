@@ -20,7 +20,7 @@ class IdeaTest < ActiveSupport::TestCase
     @easycount.name = nil
     assert_not @easycount.valid?
     @easycount.name = "NewName"
-    assert @easycount.valid?
+    assert @easycount.valid?, @easycount.errors.full_messages[0]
   end
 
   test "contact should be present" do
