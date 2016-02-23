@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.2
+before_install: 
+  - gem install rails
+  - npm install
+script: 
+  - rake test
+services:
+  - mongodb
+before_script:
+  - sleep 15
