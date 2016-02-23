@@ -10,5 +10,8 @@ class Idea
   field :tags, type: Array
   field :_id, type: String, default: -> { name }
 
+  validates :name, presence: true
+  validates :contact, presence: true
+
   embeds_one :canvas, class_name: 'Canvas', inverse_of: :idea
 end
