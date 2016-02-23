@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CanvasModelTest < ActiveSupport::TestCase
+class CanvasTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

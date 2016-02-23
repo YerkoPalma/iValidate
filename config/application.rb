@@ -30,6 +30,10 @@ module Workspace
     config.generators do |g|
       g.orm :mongoid
     end
+
+    config.generators do |g|
+      g.test_framework :test_unit
+    end
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
   end

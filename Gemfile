@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'browserify-rails'
 gem 'mongoid', '~> 5.1.0'
 
+gem 'mongoid-embedded-errors'
 # gem "mongoid-paperclip", :require => "mongoid_paperclip"
 # gem 'aws-sdk', '~> 1.3.4'
 # Use ActiveModel has_secure_password
@@ -42,6 +43,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'byebug'
+  gem 'rspec-rails', '2.13.1'
+  gem 'capybara'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do

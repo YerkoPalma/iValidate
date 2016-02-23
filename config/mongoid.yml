@@ -90,9 +90,9 @@ development:
 test:
   clients:
     default:
-      database: easycount_test
+      database: ivalidate_test
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
       options:
         read: primary
         # In the test environment we lower the retries and retry interval to
