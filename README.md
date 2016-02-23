@@ -1,5 +1,7 @@
 #iValidate
 
+[![Build Status](https://travis-ci.org/YerkoPalma/iValidate.svg?branch=master)](https://travis-ci.org/YerkoPalma/iValidate)
+
 > Project for the virtual Hackathon
 
 ![screenshot from 2016-02-22 00 16 51](https://cloud.githubusercontent.com/assets/5105812/13208704/5f22f96a-d8fa-11e5-94ec-655eb1810360.png)
