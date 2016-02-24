@@ -11,7 +11,7 @@ FactoryGirl.define do
     name "fixAR"
     description "Augmented reallity to fix things"
     contact "info@fixar.com"
-    avatar "www.placehold.it/120x120"
+    avatar "www.placehold.it/120x120.jpg"
     tags ["mobile", "AR", "augmented-reallity"]
   end
 end
