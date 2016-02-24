@@ -1,6 +1,7 @@
 #iValidate
 
 [![Build Status](https://travis-ci.org/YerkoPalma/iValidate.svg?branch=master)](https://travis-ci.org/YerkoPalma/iValidate)
+[![Code Climate](https://codeclimate.com/github/YerkoPalma/iValidate/badges/gpa.svg)](https://codeclimate.com/github/YerkoPalma/iValidate)
 
 > Project for the virtual Hackathon
 
