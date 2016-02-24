@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/YerkoPalma/iValidate.svg?branch=master)](https://travis-ci.org/YerkoPalma/iValidate)
 [![Code Climate](https://codeclimate.com/github/YerkoPalma/iValidate/badges/gpa.svg)](https://codeclimate.com/github/YerkoPalma/iValidate)
+[![Test Coverage](https://codeclimate.com/github/YerkoPalma/iValidate/badges/coverage.svg)](https://codeclimate.com/github/YerkoPalma/iValidate/coverage)
 
 > Project for the virtual Hackathon
 
