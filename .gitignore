@@ -24,3 +24,6 @@
 
 # Ignore rubocop files
 /1000
+
+# ignore brakeman output
+*.log

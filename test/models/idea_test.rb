@@ -2,7 +2,7 @@ require 'test_helper'
 
 class IdeaTest < ActiveSupport::TestCase
   def setup
-    # to prevent duplicate email
+    # to prevent duplicate ideas
     Idea.delete_all
     @easycount = build(:easycount)
   end
