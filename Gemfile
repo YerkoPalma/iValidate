@@ -45,7 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '2.13.1'
   gem 'capybara'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do
@@ -58,11 +58,11 @@ group :development do
 
   gem 'traceroute'
 
-  gem 'brakeman', :require => false
+  gem 'brakeman', require: false
 
   gem 'rails_best_practices'
 
   gem 'rubocop', require: false
 end
 
-gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'codeclimate-test-reporter', group: :test, require: nil

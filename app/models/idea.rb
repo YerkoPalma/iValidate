@@ -30,7 +30,7 @@ class Idea
     if !tags.nil?
       tags.each do |tag|
         if !tag.is_a? String
-          errors.add(:tags, "Must contain only strings")
+          errors.add(:tags, 'Must contain only strings')
         end
       end
     end
@@ -39,7 +39,7 @@ class Idea
   def uniq_tags
     if !tags.nil?
       if tags.uniq.length != tags.length
-        errors.add(:tags, "Can not add repeated tags")
+        errors.add(:tags, 'Can not add repeated tags')
       end
     end
   end
