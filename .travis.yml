@@ -4,6 +4,7 @@ rvm:
 before_install: 
   - gem install rails
   - npm install
+  - bundle update
 script: 
   - rake test
 services:
