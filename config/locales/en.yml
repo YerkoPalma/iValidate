@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  mongoid:
+    models:
+      idea: "Idea"
+      canvas: "Canvas"
+    attributes:
+      idea:
+        name: "Name"
+        description: "Description"
+        contact: "Contact e-mail"
+        avatar: "Avatar picture"
+        tags: "Description tags"
+      errors:
+        models:
+          idea:
+            attributes:
+              name: 
+                blank: " is required"
+                taken: " already exists"
+              contact:
+                blank: " is required"
+                invalid: " is invalid"
+              avatar:
+                invalid: " is not a valid image source"

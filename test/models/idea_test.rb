@@ -53,6 +53,13 @@ class IdeaTest < ActiveSupport::TestCase
       @easycount.avatar = invalid_avatar
       assert_not @easycount.valid?, "#{invalid_avatar.inspect} is not a valid <img> source"
     end
+    valid_avatars = %w[YW55IGNhcm5hbCBwbGVhc3VyZS4= YW55IGNhcm5hbCBwbGVhc3VyZQ==
+                      YW55IGNhcm5hbCBwbGVhc3Vy http://placehold.it/230x150
+                      http://placehold.it/230x150.jpg]
+    valid_avatars.each do |valid_avatar|
+      @easycount.avatar = valid_avatar
+      assert @easycount.valid?, "#{valid_avatar.inspect} is a valid <img> source"
+    end
   end
 
   test 'tags should be an array of strings' do
@@ -71,5 +78,5 @@ class IdeaTest < ActiveSupport::TestCase
     assert_not @easycount.valid?
   end
 
-  # Later, test for idea - canvas relationship
+  # Later, test for idea errors
 end

@@ -35,7 +35,7 @@ class IdeasController < ApplicationController
       if @idea.save
         format.json { render json: @idea, status: :created }
       else
-        format.json { render json: @idea.errors, status: :unprocessable_entity }
+        format.json { render json: @idea.errors.messages, status: :unprocessable_entity }
       end
     end
   end
@@ -49,7 +49,7 @@ class IdeasController < ApplicationController
       if @idea.canvas.save
         format.json { render json: @canvas, status: :created }
       else
-        format.json { render json: @canvas.errors, status: :unprocessable_entity }
+        format.json { render json: @canvas.errors.nessages, status: :unprocessable_entity }
       end
     end
   end

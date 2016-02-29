@@ -8,6 +8,7 @@ class Idea
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_BASE64_REGEX = /\A(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?\z/
   VALID_IMG_SOURCE = /\A.*\.(jpg|JPG|gif|GIF|png|PNG)\z/
+  DEFAULT_AVATAR = 'http://placehold.it/230x150'
 
   field :name, type: String
   field :description, type: String
@@ -23,7 +24,7 @@ class Idea
   embeds_one :canvas, class_name: 'Canvas', inverse_of: :idea
 
   def valid_img_source?
-    VALID_IMG_SOURCE.match(:avatar)
+    (VALID_IMG_SOURCE =~ self.avatar) == 0 || self.avatar == DEFAULT_AVATAR
   end
 
   def only_string_tags
