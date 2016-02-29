@@ -1,3 +1,5 @@
+'use strict';
+
 var Vue = require('vue');
 var TagEditor = require('./tag-editor');
 
@@ -11,8 +13,20 @@ module.exports = Vue.extend({
         description: "",
         contact: "",
         tags: []
-      }
+      },
+      errors: {}
     };
+  },
+  computed: {
+    hasErrors: function(){
+        let itHas = false;
+        for(var prop in this.errors) {
+          if (this.errors.hasOwnProperty(prop)) {
+            itHas = true;
+          }
+        }
+        return itHas;
+      }
   },
   methods: {
     addIdea: function(){
@@ -35,12 +49,19 @@ module.exports = Vue.extend({
         //success 
         //get the id to save the canvas model later
         var _id = response.data._id;
-        
+        this.errors = {};
         this.$route.router.go('/ideas/' + _id + '/canvas');
       }, function (response) {
           //error
-          console.log(JSON.stringify(response.data));
-          this.$route.router.go('/');
+          //console.log(JSON.stringify(response.data));
+          this.errors = response.data;
+          // clean wrong inputs
+          for (let error in this.errors){
+            if ( this.idea.hasOwnProperty(error) ){
+              this.idea[error] = (error === 'tags' ? [] : '');
+            }
+          }
+          // this.$route.router.go('/');
       });
     },
     addNewIdeaAvatar: function(){

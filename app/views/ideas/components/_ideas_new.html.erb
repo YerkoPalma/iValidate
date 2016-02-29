@@ -2,6 +2,15 @@
   <div class="container">
     <h1 class="text-center">Tell us about your idea...</h1>
     <br>
+    <div v-if="hasErrors" class="alert alert-danger fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4>You must correct some errors before continuing</h4>
+      <ul>
+        <li v-for="error in errors">{{$key + ' ' + error}}</li>
+      </ul>
+    </div>
     <div class="row">
       <div class="col-lg-1">
         <span class="step-number">1</span>

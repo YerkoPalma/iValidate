@@ -1,12 +1,12 @@
 $(document).ready(function(){
+  'use strict';
+
   var Vue = require('vue');
   var VueRouter = require('vue-router');
   
   Vue.use(require('vue-resource'));
   Vue.use(require('vue-router'));
   Vue.config.debug = true;
-  
-  
  
   /**
    *  Components
