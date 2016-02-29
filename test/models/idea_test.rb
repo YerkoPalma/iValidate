@@ -14,11 +14,17 @@ class IdeaTest < ActiveSupport::TestCase
   test 'should not save blank ideas' do
     blank_idea = Idea.new
     assert_not blank_idea.save, 'Saved empty idea'
+
+    # error message should say what fields are required
+    assert_not_empty blank_idea.errors
+    assert_includes blank_idea.errors, :name
+    assert_includes blank_idea.errors, :contact
   end
 
   test 'name should be present' do
     @easycount.name = nil
     assert_not @easycount.valid?
+    assert_includes @easycount.errors, :name
     @easycount.name = 'NewName'
     assert @easycount.valid?, @easycount.errors.full_messages[0]
   end
@@ -26,6 +32,7 @@ class IdeaTest < ActiveSupport::TestCase
   test 'contact should be present' do
     @easycount.contact = nil
     assert_not @easycount.valid?
+    assert_includes @easycount.errors, :contact
     @easycount.contact = 'new@mail.com'
     assert @easycount.valid?
   end
@@ -36,6 +43,7 @@ class IdeaTest < ActiveSupport::TestCase
     invalid_addresses.each do |invalid_address|
       @easycount.contact = invalid_address
       assert_not @easycount.valid?, "#{invalid_address.inspect} should be invalid for contact"
+      assert_includes @easycount.errors, :contact
     end
   end
 
@@ -44,6 +52,7 @@ class IdeaTest < ActiveSupport::TestCase
     duplicate_idea.name = @easycount.name.upcase
     @easycount.save
     assert_not duplicate_idea.valid?
+    assert_includes duplicate_idea.errors, :name
   end
 
   test 'avatar should be a valid base64 string or image url' do
@@ -52,6 +61,7 @@ class IdeaTest < ActiveSupport::TestCase
     invalid_avatars.each do |invalid_avatar|
       @easycount.avatar = invalid_avatar
       assert_not @easycount.valid?, "#{invalid_avatar.inspect} is not a valid <img> source"
+      assert_includes @easycount.errors, :avatar
     end
     valid_avatars = %w[YW55IGNhcm5hbCBwbGVhc3VyZS4= YW55IGNhcm5hbCBwbGVhc3VyZQ==
                       YW55IGNhcm5hbCBwbGVhc3Vy http://placehold.it/230x150
@@ -71,12 +81,12 @@ class IdeaTest < ActiveSupport::TestCase
     # must be an array of strings, any other data type is invalid
     @easycount.tags = [1, 2, 3]
     assert_not @easycount.valid?
+    assert_includes @easycount.errors, :tags
   end
 
   test 'the tags array should not have duplicate values' do
     @easycount.tags = %w[tag1 tag2 tag1]
     assert_not @easycount.valid?
+    assert_includes @easycount.errors, :tags
   end
-
-  # Later, test for idea errors
 end

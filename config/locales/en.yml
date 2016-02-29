@@ -31,6 +31,16 @@ en:
         contact: "Contact e-mail"
         avatar: "Avatar picture"
         tags: "Description tags"
+      canvas:
+        key_partners: "Key partners"
+        key_activities: "Key activities"
+        key_resources: "Key resources"
+        value_propositions: "Value proposition"
+        customer_relationships: "Customer relationships"
+        channels: "Channels"
+        customer_segments: "Customer segments"
+        cost_structures: "Cost structures"
+        revenue_streams: "Revenue streams"
       errors:
         models:
           idea:
@@ -43,3 +53,23 @@ en:
                 invalid: " is invalid"
               avatar:
                 invalid: " is not a valid image source"
+          canvas:
+            attributes:
+              key_partners:
+                blank: " is required"
+              key_activities:
+                blank: " is required"
+              key_resources:
+                blank: " is required"
+              value_propositions:
+                blank: " is required"
+              customer_relationships:
+                blank: " is required"
+              channels:
+                blank: " is required"
+              customer_segments:
+                blank: " is required"
+              cost_structures:
+                blank: " is required"
+              revenue_streams:
+                blank: " is required"
