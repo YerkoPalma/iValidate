@@ -26,7 +26,7 @@
     "browserify-fs": "^1.0.0",
     "jasmine-ajax": "^3.2.0",
     "jasmine-core": "^2.4.1",
-    "karma": "^0.13.19",
+    "karma": "^1.0.0",
     "karma-browserify": "^5.0.3",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^0.3.6",
