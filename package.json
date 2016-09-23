@@ -15,7 +15,7 @@
     "browserify-incremental": "^3.1.1",
     "url": "^0.11.0",
     "vue": "^1.0.13",
-    "vue-resource": "^0.9.3",
+    "vue-resource": "^1.0.3",
     "vue-router": "^0.7.7"
   },
   "devDependencies": {
